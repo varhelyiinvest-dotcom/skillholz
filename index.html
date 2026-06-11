@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillHolz – Faépítés, ácsszerkezetek, egyedi faipari megoldások | Pest megye</title>
+<meta name="description" content="Faépítési és ácsszerkezeti kivitelezés Pest megyében: tetőszerkezetek, pergolák, teraszok, homlokzatburkolatok és egyedi asztalosipari munkák lakossági és B2B megrendelőknek.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B3A60;
+  --navy-deep:#142C4A;
+  --orange:#F0A32B;
+  --amber:#F7C56A;
+  --paper:#F7F4EE;
+  --ink:#222730;
+  --muted:#5D6673;
+  --line:#E4DED2;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Quicksand',sans-serif;line-height:1.15}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* ── Fejléc ── */
+header{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Quicksand',sans-serif;font-weight:700;font-size:1.35rem;text-decoration:none;color:var(--navy)}
+.brand span{color:var(--orange)}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
+.nav ul a:hover{color:var(--navy)}
+@media(max-width:720px){.nav ul{display:none}}
+
+/* ── Hero ── */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero svg.grain{position:absolute;inset:0;width:100%;height:100%;opacity:.16}
+.hero-inner{position:relative;padding:88px 0 96px;text-align:center}
+.hero img.logo{width:118px;margin:0 auto 28px;border-radius:50%;box-shadow:0 8px 40px rgba(0,0,0,.35)}
+.hero h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:700;max-width:760px;margin:0 auto 18px}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p.lead{max-width:620px;margin:0 auto 36px;color:#C9D4E2;font-size:1.1rem}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 30px;border-radius:999px;text-decoration:none;font-weight:600;font-family:'Quicksand',sans-serif;font-size:1rem;transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.btn-orange{background:var(--orange);color:var(--navy-deep);box-shadow:0 6px 24px rgba(240,163,43,.35)}
+.btn-ghost{border:2px solid rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+/* ── Szekciók ── */
+section{padding:84px 0}
+.eyebrow{font-family:'Quicksand',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--orange);margin-bottom:10px}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--navy);margin-bottom:14px}
+.section-lead{max-width:640px;color:var(--muted);margin-bottom:46px}
+
+/* Szolgáltatások */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+.card .ico{width:46px;height:46px;border-radius:12px;background:var(--navy);color:var(--amber);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.card h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
+.card p{font-size:.95rem;color:var(--muted)}
+
+/* Galéria */
+#munkaink{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gallery{columns:3;column-gap:16px}
+@media(max-width:900px){.gallery{columns:2}}
+@media(max-width:560px){.gallery{columns:1}}
+.gallery figure{break-inside:avoid;margin:0 0 16px;border-radius:var(--radius);overflow:hidden;position:relative;background:var(--navy)}
+.gallery img{width:100%;transition:transform .35s ease}
+.gallery figure:hover img{transform:scale(1.03)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:.85rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(20,44,74,.85))}
+
+/* Megrendelők */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.split .pane{border-radius:var(--radius);padding:34px 30px}
+.pane.b2b{background:var(--navy);color:#fff}
+.pane.b2b h3{color:var(--amber)}
+.pane.lakossagi{background:#fff;border:1px solid var(--line)}
+.pane.lakossagi h3{color:var(--navy)}
+.pane h3{font-size:1.25rem;margin-bottom:12px}
+.pane ul{list-style:none;margin-top:10px}
+.pane li{padding-left:26px;position:relative;margin-bottom:9px;font-size:.97rem}
+.pane li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:3px;border-radius:2px;background:var(--orange)}
+.pane.b2b p, .pane.b2b li{color:#C9D4E2}
+.pane.lakossagi p, .pane.lakossagi li{color:var(--muted)}
+
+/* Folyamat */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;counter-reset:step}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;counter-increment:step}
+.step::before{content:counter(step,decimal-leading-zero);font-family:'Quicksand',sans-serif;font-weight:700;font-size:1.6rem;color:var(--orange);display:block;margin-bottom:10px}
+.step h3{font-size:1.05rem;color:var(--navy);margin-bottom:6px}
+.step p{font-size:.93rem;color:var(--muted)}
+
+/* Kapcsolat */
+#kapcsolat{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+#kapcsolat svg.grain{position:absolute;inset:0;width:100%;height:100%;opacity:.12}
+#kapcsolat .wrap{position:relative;text-align:center}
+#kapcsolat h2{color:#fff}
+#kapcsolat p.section-lead{margin:0 auto 36px;color:#C9D4E2}
+.contact-grid{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:8px}
+.contact-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:22px 34px;min-width:240px}
+.contact-card .label{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);font-family:'Quicksand',sans-serif;font-weight:700;margin-bottom:6px}
+.contact-card a{font-size:1.15rem;font-weight:600;text-decoration:none;color:#fff}
+.contact-card a:hover{color:var(--amber)}
+.contact-card .plain{font-size:1.05rem;font-weight:500}
+
+footer{background:var(--navy-deep);color:#8FA3BC;font-size:.88rem;padding:26px 0;text-align:center}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">Skill<span>Holz</span></a>
+    <nav aria-label="Fő navigáció">
+      <ul>
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#munkaink">Munkáink</a></li>
+        <li><a href="#megrendelok">Kiknek dolgozunk</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <svg class="grain" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1200 600">
+    <g fill="none" stroke="#7E9CC4" stroke-width="1.4">
+      <path d="M-50 80 C 200 20, 420 140, 650 80 S 1050 30, 1250 90"/>
+      <path d="M-50 160 C 180 100, 430 230, 660 160 S 1060 110, 1250 170"/>
+      <path d="M-50 240 C 210 180, 410 320, 670 240 S 1040 190, 1250 250"/>
+      <path d="M-50 320 C 190 260, 440 410, 650 320 S 1070 270, 1250 330"/>
+      <path d="M-50 400 C 220 340, 400 500, 680 400 S 1030 350, 1250 410"/>
+      <path d="M-50 480 C 180 420, 450 590, 640 480 S 1080 430, 1250 490"/>
+      <ellipse cx="320" cy="300" rx="90" ry="46"/>
+      <ellipse cx="320" cy="300" rx="55" ry="26"/>
+      <ellipse cx="900" cy="180" rx="80" ry="40"/>
+      <ellipse cx="900" cy="180" rx="45" ry="20"/>
+    </g>
+  </svg>
+  <div class="wrap hero-inner">
+    <img class="logo" src="images/logo.jpg" alt="SkillHolz logó" width="118" height="118">
+    <h1>Fából építünk. <em>Tetőtől</em> a legkisebb részletig.</h1>
+    <p class="lead">Faépítési és ácsszerkezeti kivitelezés Pest megyében és környékén – tetőszerkezetek, pergolák, teraszok, homlokzatok és egyedi faipari megoldások, lakossági és üzleti megrendelőknek.</p>
+    <div class="cta-row">
+      <a class="btn btn-orange" href="tel:+36301234567">Hívjon minket</a>
+      <a class="btn btn-ghost" href="#munkaink">Munkáink megtekintése</a>
+    </div>
+  </div>
+</div>
+
+<section id="szolgaltatasok">
+  <div class="wrap">
+    <div class="eyebrow">Szolgáltatások</div>
+    <h2>Amivel foglalkozunk</h2>
+    <p class="section-lead">A szerkezetépítéstől a finom asztalosmunkáig egy kézben tartjuk a fát – tervezhetően, határidőre.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/></svg></div>
+        <h3>Tetőszerkezetek</h3>
+        <p>Új építésű és felújítandó ácsszerkezetek kivitelezése, fedélszékek, lemezfedéssel és bádogos munkákkal együtt is.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M5 9V20M19 9V20M9 9v11M14 9v11M4 5h16"/></svg></div>
+        <h3>Pergolák és teraszok</h3>
+        <p>Kültéri faszerkezetek, árnyékolók, teraszburkolatok – időtálló anyagokból, az épülethez illő kialakítással.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 3v18M13 3v18M18 3v18"/></svg></div>
+        <h3>Faépítés és homlokzatok</h3>
+        <p>Könnyűszerkezetes faépítés, homlokzatburkolatok, lécburkolatok és nyílászáró-kávák – a vázszerkezettől a látszó felületig.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4z"/><path d="M4 11l8 4 8-4"/><path d="M4 15l8 4 8-4"/></svg></div>
+        <h3>Egyedi asztalosmunkák</h3>
+        <p>Beépített bútorok, konyhák, belsőépítészeti faburkolatok – méretre, egyedi igények szerint.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="munkaink">
+  <div class="wrap">
+    <div class="eyebrow">Referenciák</div>
+    <h2>Kész munkáink</h2>
+    <p class="section-lead">Néhány közelmúltbeli projektünk – a szerkezettől a kulcsrakész belső terekig.</p>
+    <div class="gallery">
+      <figure><img src="images/tetoszerkezet.jpg" alt="Korcolt lemezfedésű tetőszerkezet ereszcsatornával" loading="lazy"><figcaption>Tetőszerkezet korcolt lemezfedéssel</figcaption></figure>
+      <figure><img src="images/homlokzat-szines.jpg" alt="Függőleges lécburkolatú homlokzat színes ablakkávákkal" loading="lazy"><figcaption>Lécburkolatú homlokzat, egyedi ablakkávák</figcaption></figure>
+      <figure><img src="images/tinyhouse-konyha.jpg" alt="Tömörfa burkolatú konyha beépített gépekkel" loading="lazy"><figcaption>Beépített konyha tömörfa frontokkal</figcaption></figure>
+      <figure><img src="images/homlokzat-ablak.jpg" alt="Tolózsalus ablak fa homlokzaton" loading="lazy"><figcaption>Tolózsalus nyílászáró-kialakítás</figcaption></figure>
+      <figure><img src="images/irodakonyha.jpg" alt="Irodai teakonyha egyedi bárpulttal" loading="lazy"><figcaption>Irodai közösségi tér egyedi bútorokkal</figcaption></figure>
+      <figure><img src="images/etkezo-boxok.jpg" alt="Fa keretes étkezőboxok irodában" loading="lazy"><figcaption>Egyedi étkezőboxok – B2B projekt</figcaption></figure>
+      <figure><img src="images/ereszcsatorna.jpg" alt="Ereszcsatorna és lécburkolat csomópont" loading="lazy"><figcaption>Eresz- és burkolatcsomópont</figcaption></figure>
+      <figure><img src="images/oszlopburkolat.jpg" alt="Tölgy oszlopburkolat álmennyezeti fa rácshoz csatlakozva" loading="lazy"><figcaption>Tölgy oszlop- és mennyezetburkolat</figcaption></figure>
+      <figure><img src="images/konyhasziget.jpg" alt="Konyhasziget bárszékekkel irodai konyhában" loading="lazy"><figcaption>Egyedi konyhasziget</figcaption></figure>
+      <figure><img src="images/fenyek.jpg" alt="Fa rácsos álmennyezet kötél függesztékes lámpákkal" loading="lazy"><figcaption>Látszó fa álmennyezet, egyedi világítás</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="megrendelok">
+  <div class="wrap">
+    <div class="eyebrow">Megrendelőink</div>
+    <h2>Kiknek dolgozunk</h2>
+    <p class="section-lead">Ugyanazzal a precizitással dolgozunk családi házon és irodaprojekten is.</p>
+    <div class="split">
+      <div class="pane b2b">
+        <h3>Cégeknek és kivitelezőknek</h3>
+        <p>Generálkivitelezők, építészirodák és cégek megbízható alvállalkozó partnere vagyunk.</p>
+        <ul>
+          <li>Irodai és kereskedelmi belső terek faipari munkái</li>
+          <li>Ácsszerkezetek kivitelezése tervek alapján</li>
+          <li>Határidőre, dokumentáltan, saját csapattal</li>
+        </ul>
+      </div>
+      <div class="pane lakossagi">
+        <h3>Lakossági megrendelőknek</h3>
+        <p>Családi házak, nyaralók és kertek faszerkezeti munkáit végezzük felméréstől átadásig.</p>
+        <ul>
+          <li>Tetők, pergolák, teraszok építése és felújítása</li>
+          <li>Homlokzatburkolatok, kerti faszerkezetek</li>
+          <li>Egyedi bútorok és beépített megoldások</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="folyamat">
+  <div class="wrap">
+    <div class="eyebrow">Folyamat</div>
+    <h2>Így dolgozunk</h2>
+    <p class="section-lead">Átlátható lépések az első hívástól az átadásig.</p>
+    <div class="steps">
+      <div class="step"><h3>Felmérés</h3><p>Egyeztetjük az igényeket, helyszíni felmérést végzünk, és átnézzük a meglévő terveket.</p></div>
+      <div class="step"><h3>Árajánlat</h3><p>Részletes, tételes ajánlatot adunk anyagokkal és ütemezéssel – meglepetések nélkül.</p></div>
+      <div class="step"><h3>Kivitelezés</h3><p>Saját csapatunk végzi a munkát a vállalt határidőre, rendezett munkaterülettel.</p></div>
+      <div class="step"><h3>Átadás</h3><p>Közös bejárással adjuk át a kész munkát, és utána is elérhetők maradunk.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kapcsolat">
+  <svg class="grain" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1200 400">
+    <g fill="none" stroke="#7E9CC4" stroke-width="1.4">
+      <path d="M-50 60 C 200 10, 420 110, 650 60 S 1050 20, 1250 70"/>
+      <path d="M-50 140 C 180 90, 430 200, 660 140 S 1060 100, 1250 150"/>
+      <path d="M-50 220 C 210 170, 410 290, 670 220 S 1040 180, 1250 230"/>
+      <path d="M-50 300 C 190 250, 440 380, 650 300 S 1070 260, 1250 310"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--amber)">Kapcsolat</div>
+    <h2>Beszéljünk a projektjéről</h2>
+    <p class="section-lead">Hívjon vagy írjon nekünk – rövid egyeztetés után helyszíni felmérést és árajánlatot adunk.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="label">Telefon</div>
+        <a href="tel:+36301234567">+36 30 123 4567</a>
+      </div>
+      <div class="contact-card">
+        <div class="label">E-mail</div>
+        <a href="mailto:info@skillholz.hu">info@skillholz.hu</a>
+      </div>
+      <div class="contact-card">
+        <div class="label">Működési terület</div>
+        <div class="plain">Pest megye és környéke</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="year">2026</span> SkillHolz · Faépítési és ácsszerkezeti kivitelezés</div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
